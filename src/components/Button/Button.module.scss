@@ -1,0 +1,32 @@
+@use "../../styles" as *;
+
+.button-container {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 2px 8px $primary-color;
+    transition: all .1s linear;
+    cursor: pointer;
+
+    & + .button-container {
+        margin-left: 24px;
+    }
+
+    :only-child {
+        color: $text-color;
+    }
+
+    &:active {
+        background-color: $primary-color;
+
+        :only-child {
+            color: $white-color;
+        }
+    }
+
+    
+}

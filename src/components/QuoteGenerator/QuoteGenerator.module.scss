@@ -1,0 +1,102 @@
+@import "../../styles/index.scss";
+
+.quote-container {
+    height: 100vh;
+    position: relative;
+
+    .top,
+    .bottom {
+        height: $height-top-bottom;
+        background-color: $primary-color;
+    }
+
+    .center {
+        .center-row {
+            width: 100%;
+        }
+    }
+
+    .categogy {
+        padding: 16px 0px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        ::-webkit-scrollbar {
+            border-radius: 0;
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: rgba(22, 24, 35, 0.06);
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    .content {
+        color: $text-color;
+        .icon-quote {
+            font-size: 8rem;
+            color: $black-color;
+            margin: 12px 0;
+        }
+
+        .text {
+            margin: 34px 0;
+            text-indent: 5%;
+            white-space: wrap;
+            max-height: 160px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .author {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: end;
+            margin-right: 306px;
+        }
+    }
+
+    .actions {
+        position: absolute;
+        bottom: calc($height-top-bottom + $height-top-bottom);
+        padding: 8px 0;
+
+        .action-row {
+            align-items: center;
+
+            a {
+                margin-left: 12px;
+            }
+        }
+
+        .containerBtn {
+            display: flex;
+        }
+
+        .container-social {
+            text-align: right;
+        }
+
+        .icon-facebook {
+            color: blue;
+        }
+
+        .icon-instagram {
+            color: orange;
+        }
+    }
+
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

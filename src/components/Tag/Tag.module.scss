@@ -1,0 +1,27 @@
+@import "../../styles/";
+
+.tag-container {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px $text-color;
+    background-color: #E5E5E5;
+    font-size: 2rem;
+    cursor: pointer;
+
+    & + .tag-container {
+        margin-left: 12px;
+    }
+    
+    
+    &:active {
+        box-shadow: 0px 0px 4px $text-color;
+    }
+}
+.active {
+    background-color: $primary-color;
+    color: $white-color;
+}
+
+
